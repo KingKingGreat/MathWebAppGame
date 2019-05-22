@@ -39,9 +39,20 @@ function createQuestion(e) {
 	document.getElementById("questionText").textContent = question[0] + " + " + question[1];
 
 	var num = Math.floor(Math.random() * 100);
-	var index = 0;
 
-	answers[correctPlace].textContent = question[0] + question[1];
+	for (var i = 0; i < answers.length; i++) {
+		if (i === correctPlace) {
+			num = (question[0] + question[1]);
+
+			answers[correctPlace].textContent = num;
+		} else if (i !== correctPlace) {
+			while (num === question[0] + question[1]) {
+				num = Math.floor(Math.random() * 10);
+			}
+
+			answers[i].textContent = num;
+		}
+	}
 
 	console.log("Old Val : " + correctPlace);
 
