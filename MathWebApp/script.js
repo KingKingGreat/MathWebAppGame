@@ -1,5 +1,10 @@
-// Connect Button
-var checkButton = document.getElementById("checkButton");
+// Connects Elements
+var a = document.getElementById("a");
+var b = document.getElementById("b");
+
+// Declare Gobal Variable
+var answers = [a, b];
+var correctPlace = Math.floor(Math.random() * answers.length);
 
 // Animation Function
 function animate(id, v) {
@@ -28,39 +33,43 @@ function animate(id, v) {
 };
 
 // Declare onButtonClick Function
-function onButtonClick() {
-	var a = document.getElementById("a");
-	var b = document.getElementById("b");
-
-	var question = [Math.floor(Math.random() * 10), Math.floor(Math.random() * 10)];
-	var answers = [a, b];
+function createQuestion(e) {
+	var question = [Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)];
 
 	document.getElementById("questionText").textContent = question[0] + " + " + question[1];
 
-	var num = Math.floor(Math.random() * 10);
-	var correctPlace = Math.floor(Math.random() * answers.length);
-	for (var i = 0; i < answers.length; i++) {
-		if (i === correctPlace) {
-			while (num !== (question[0] + question[1])) {
-				num = Math.floor(Math.random() * 10);
-			}
+	var num = Math.floor(Math.random() * 100);
+	var index = 0;
 
-			answers[i].value = num;
+	answers[correctPlace].textContent = question[0] + question[1];
+
+	console.log("Old Val : " + correctPlace);
+
+	if (e !== null) {
+		if (parseInt(e.textContent) === (question[0] + question[1])) {
+			document.getElementById("rText").textContent = "Correct";
 		} else {
-			while (num === (question[0] + question[1])) {
-				num = Math.floor(Math.random() * 10);
-			}
-
-			answers[i].value = num;
+			document.getElementById("rText").textContent = "Incorrect";
 		}
 	}
+
+	correctPlace = Math.floor(Math.random() * answers.length);
+	console.log("New Val : " + correctPlace);
 }
 
 // Declare Animation Variable
 var fade;
 
 // Add Event Listener on Button
-checkButton.addEventListener("click", onButtonClick);
+a.addEventListener("click", function() {
+	createQuestion(a);
+});
+
+b.addEventListener("click", function() {
+	createQuestion(b);
+});
+
+createQuestion(null);
 
 // On Start Up
 
