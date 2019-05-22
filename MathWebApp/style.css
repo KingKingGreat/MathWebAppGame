@@ -74,13 +74,6 @@
 		margin-right: 20px;
 		color: rgb(0, 255, 255);
 	}
-	#startButton {
-		background-color: rgb(165, 42, 42);
-		margin: 20px;
-		padding: 5px;
-		color: white;	
-		border: 2px solid rgb(165, 50, 42);
-	}
 	#checkButton {
 		background-color: rgb(165, 42, 42);
 		padding: 5px;
@@ -93,9 +86,6 @@
 	}
 	#rText {
 		color: rgb(0, 255, 0);
-	}
-	#eText {
-		color: rgb(255, 0, 0);
 	}
 	body {
 		background-color: rgb(25, 25, 112);
