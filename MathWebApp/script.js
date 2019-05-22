@@ -45,19 +45,26 @@ function createQuestion(e) {
 			num = (question[0] + question[1]);
 
 			answers[correctPlace].textContent = num;
+			console.log("Value Set [correctPlace] : " + answers[correctPlace].textContent);
 		} else if (i !== correctPlace) {
 			while (num === question[0] + question[1]) {
 				num = Math.floor(Math.random() * 10);
 			}
 
-			answers[i].textContent = num;
+			if (correctPlace === 1) {
+				answers[0].textContent = num;
+				console.log("Value Set [Incorrect answers 0] : " + answers[0].textContent);
+			} else {
+				answers[1].textContent = num;
+				console.log("Value Set [Incorrect answers 1] : " + answers[1].textContent);
+			}
 		}
 	}
 
 	console.log("Old Val : " + correctPlace);
 
 	if (e !== null) {
-		if (parseInt(e.textContent) === (question[0] + question[1])) {
+		if (e === answers[correctPlace]) {
 			document.getElementById("rText").textContent = "Correct";
 		} else {
 			document.getElementById("rText").textContent = "Incorrect";
