@@ -2,7 +2,7 @@
 Test your Math Skill
 
 How to play : 
-* Download the latest release from the version tab.
+* Download the latest release from the release tab.
 * Extract the ZIP
 * Open MathWebAppGame folder
 * Double click the HTML file to play
