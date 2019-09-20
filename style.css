@@ -1,0 +1,117 @@
+<style>
+	#a {
+		color: blue;
+	}
+	.title {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		right: 0px;
+		text-align: center;
+		background-color: rgb(0, 0, 150);
+		color: white;
+		width: 100%;
+	}
+	.howDoes {
+		position: absolute;
+		top: 150px;
+		left: 0px;
+		right: 0px;
+		margin-left: 20px;
+		margin-right: 20px;
+		background-color: rgb(0, 0, 139);
+		border-radius: 10px;
+	}
+	.content {
+		position: absolute;
+		top: 370px;
+		left: 0px;
+		right: 0px;
+		margin-left: 20px;
+		margin-right: 20px;
+		padding-left: 10px;
+		background-color: rgb(0, 0, 139);
+		color: white;
+		border-radius: 10px;
+	}
+	.footer {
+		position: absolute;
+		top: 780px;
+		left: 0px;
+		right: 0px;
+		padding-left: 10px;
+		background-color: rgb(0, 0, 139);
+		color: white;
+	}
+	.answer {
+		pointer-events: pointer;
+		background-color: rgb(0, 2, 255);
+		padding: 5px;
+		color: white;	
+		margin: 20px;
+		border: none;
+		border-radius: 5px;
+	}
+	.desc {
+		margin-bottom: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+		color: rgb(0, 255, 255);
+	}
+	#titleText {
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#descText {
+		margin-bottom: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#titleHowDoes {
+		margin-top: 20px;
+		margin-left: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		color: white;
+	}
+	#checkButton {
+		background-color: rgb(165, 42, 42);
+		padding: 5px;
+		margin: 20px;
+		color: white;	
+		border: 2px solid rgb(165, 50, 42);
+	}
+	#playAgainBtn {
+		background-color: rgb(19, 11, 126);
+		padding: 10px;
+		margin: 20px;
+		color: white;	
+		border: 2px solid rgb(14, 3, 56);
+	}
+	#questionText {
+		margin: 20px;
+	}
+	#rText {
+		color: rgb(0, 255, 0);
+	}
+	#gameBody {
+		display: block;
+	}
+	#gameOver {
+		display: none;
+	}
+	body {
+		background-color: rgb(25, 25, 112);
+		font-family: "Arial", "Helvetica", "sans-serif";
+		margin-bottom: 200px;
+	}
+	input, select {
+		margin: 20px;
+		background-color: rgb(0, 255, 255);
+		color: black;
+	}
+	button {
+		cursor: pointer;
+	}
+</style>

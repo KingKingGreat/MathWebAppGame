@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Math Web App</title>
+			<meta charset="UTF-8">
+			<link rel="stylesheet" type="text/css" href="style.css">
+		</head>
+		<body id="body">
+			<div class="title">
+				<h1 id="titleWeb">Math Web App</h1>
+				<h2 id="descWeb">Test Your Math Skill</h2>
+			</div>
+			<div class="howDoes">
+				<h2 id="titleHowDoes">How does it work ?</h2>
+				<p class="desc">You have score & lives. Every correct answer is <strong>+1 score</strong> & <strong>-1 live</strong> for incorrect answer.<br>The game will end when you have no lives.<br>Start by answering the question.</p>
+			</div>
+			<div class="content">
+				<div id="gameOver" style="text-align: center;">
+					<h2>Game Over</h2>
+					<p class="desc">Your score is <span name="resultScore"></span></p>
+					<button id="playAgainBtn">Play Again</button>
+				</div>
+				<div id="gameBody">
+					<h2 class="desc" style="color: white;"><strong>Score : <span name="score"></span> Lives : <span name="lives"></span></strong></h2>
+					<h2 id="questionText">Question</h2>
+					<button class="answer" name="answer">Answer A</button><br>
+					<button class="answer" name="answer">Answer B</button><br>
+					<h3 id="rText"></h3>
+				</div>
+			</div>
+			<div class="footer">
+				<h2 id="version"></h2>
+			</div>
+			<script src="config.js"></script>
+			<script src="functions.js"></script>
+			<script src="core.js"></script>
+		</body>
+</html>
